@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Or Join Meeting</title>
+    <link rel="stylesheet" href="public/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="public/Assets/css/style.css">
+
+</head>
+
+<style>
+    /* Header styles */
+    header {
+        background-color: rgb(211, 231, 138);
+        padding: 20px;
+        color: rgb(231, 189, 189);
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .navbar-brand {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Navigation styles */
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: rgb(246, 236, 236);
+        text-decoration: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: right;
+    }
+
+    .navbar-nav li {
+        margin-left: 10px;
+    }
+
+    .sign-in,
+    .join-meeting,
+    .new-meeting {
+        margin-left: auto;
+    }
+
+    body {
+        padding-top: 2.5rem;
+    }
+</style>
+
+
+
+<body style="padding-top: 2.5rem;">
+    <header>
+        <img src="public/assets/images/google-meet-icon.png" class="logo" alt="">
+        <a href="#" class="navbar-brand text-dark">Google Meet</a>
+        <nav class="navbar navbar-expand-md">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item sign-in display-center">
+                        <a href="/auth/google/callback" class="nav-link">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-secondary btn-lg text-info font-weight-bold join-meeting">JOIN MEET</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-info text-light font-weight-bold new-meeting">Start New Meeting</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+
+
+
+    <main>
+        <div class="jumbotron h-100 d-flex">
+            <div class="container w-50">
+                <h3 style="font-size: 3rem;"> Stay connected and engaged with virtual backgrounds and fun video filters. </h3>
+                <!-- <p style="font-size: 20px;">
+                    We're redesigning the Google Meet service for secure business meetings and making it free for
+                    everyone to use.
+                </p> -->
+                <h1>start your meeting</h1>
+                <ul class="display-center justify-content-start">
+                    <li style="padding: 0;">
+                        <button class="btn btn-lg text-light font-weight-bold display-center new-meeting"
+                            style="background-color: #01796b;"><a href="http://localhost:3000/meetingUrl"><span
+                                    class="material-icons mr-2">video_call</span>New
+                                Meeting</a></button>
+                    </li>
+                    <li class="pl-3">
+                        <button class="btn btn-lg btn-outline-secondary text-dark font-weight-bold display-center"
+                            style="background-color: #ffffff;"><span class="material-icons mr-2">keyboard</span><input
+                                type="text" placeholder="Enter a code" style="border: none;"
+                                class="enter-code"></button>
+                    </li>
+                    <li class="text-dark font-weight-bold cursor-pointer pl-2 join-action">Join</li>
+                </ul>
+            </div>
+            <div class="container w-50">
+                <img src="public/Assets/images/meeting_image.png" alt="" class="signin-image">
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $(document).on("click", ".join-meeting", function () {
+                $(".enter-code").focus();
+                // })
+                // $(document).on("click", ".join-action", function () {
+                //     var join_value = $('.enter-code').val();
+                //     var meetingUrl = window.location.origin + "?meetingID=" + join_value;
+                //     window.location.replace(meetingUrl);
+                // })
+                // $(document).on("click", ".new-meeting", function () {
+                //     var eight_d_value = Math.floor(Math.random() * 100000000);
+                //     var meetingUrl = window.location.origin + "?meetingID=" + eight_d_value;
+                //     window.location.replace(meetingUrl);
+                // })
+
+            })
+        }
+    </script>
+</body>
+     
+</html>
