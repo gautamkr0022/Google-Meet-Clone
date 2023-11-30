@@ -1,5 +1,5 @@
 {
-  "name": "meet",
+  "name": "q",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,8 @@
     "passport-google-oauth20": "^2.0.0",
     "query-string": "^7.1.1",
     "socket.io": "^4.5.1"
-  }
+  },
+  "devDependencies": {},
+  "author": "",
+  "description": ""
 }
